@@ -1,0 +1,27 @@
+{
+  "name": "adless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "npm run copy-files && tsc -w",
+    "build:prod": "npm run copy-files && tsc",
+    "dev": "nodemon build/index.js",
+    "start": "node build/index.js",
+    "copy-files": "rm -rf ./build/assets && mkdir -p ./build/ && cp -R ./src/assets/ ./build/assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "fastify": "^3.25.1",
+    "pino": "^7.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.2",
+    "@types/pino": "^7.0.5",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.4"
+  }
+}
